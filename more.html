@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Portuguese taxes</title>
+        <link rel="stylesheet" href="demo.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="demo-print.css" type="text/css" media="print">
+        <script src="raphael.js"></script>
+        <script src="popup.js"></script>
+        <script src="jquery.js"></script>
+        <script src="analytics.js"></script>
+	<script src="taxes.js"></script>
+        <style type="text/css" media="screen">
+            #holder {
+                height: 250px;
+                margin: -125px 0 0 -400px;
+                width: 800px;
+            }
+        </style>
+    </head>
+    <body>
+<br/>This is the example where you're taxing 100%, my <a href="proposal.html">scenario</a> is much more friendly, but as you can see the curve is pretty identical, only more accentuated. Also, notice that I zoomed out 4x, so you can see that even earning obscene ammounts, with 100% tax, you'll never manage to get more than three times the legal monthly minimum wage.
+	<table id="data"></table>
+	<script>
+		// some definitions I might want to change, regarding how heavy I want this to be...
+		var max_monthly_wage =  48000; // don't really need to look above that, do I?
+		var monthly_resolution =  800; // the smaller they are, the heavier this is
+		var tax = 1;
+
+		var elem = document.getElementById("data"); 
+		elem.innerHTML=proposal(max_monthly_wage, monthly_resolution, tax);
+	</script>
+        <div id="holder">IRS 2012 in Portugal: how many &euro; people earn monthly vs. how much get get (after taxes collection)</div>
+        <p id="copy">The presentation was inspired by one of <a href="http://raphaeljs.com/">Raphaël</a>'s demos...</p>
+    </body>
+</html>

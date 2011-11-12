@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Portuguese taxes</title>
+        <link rel="stylesheet" href="demo.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="demo-print.css" type="text/css" media="print">
+        <script src="raphael.js"></script>
+        <script src="popup.js"></script>
+        <script src="jquery.js"></script>
+        <script src="analytics.js"></script>
+	<script src="taxes.js"></script>
+        <style type="text/css" media="screen">
+            #holder {
+                height: 250px;
+                margin: -125px 0 0 -400px;
+                width: 800px;
+            }
+        </style>
+    </head>
+    <body>
+<br/>This is how I think taxes would be fair. If you want to compair with what's going to be in 2012, <a href="index.html">here it is</a>.
+<br/>Notice that in this scenario there are no "bumps", everything's progressive and fluid. And it is no matter how much we want to tax <a href="more.html">more</a> or <a href="less.html">less</a>... because this model is trivially simple: everyone pays the same tax. 
+	<table id="data"></table>
+	<script>
+		// some definitions I might want to change, regarding how heavy I want this to be...
+		var max_monthly_wage =  12000; // don't really need to look above that, do I?
+		var monthly_resolution =  200; // the smaller they are, the heavier this is
+		var tax = 0.48;
+
+		var elem = document.getElementById("data"); 
+		elem.innerHTML=proposal(max_monthly_wage, monthly_resolution, tax);
+	</script>
+        <div id="holder">IRS 2012 in Portugal: how many &euro; people earn monthly vs. how much get get (after taxes collection)</div>
+        <p id="copy">The presentation was inspired by one of <a href="http://raphaeljs.com/">Raphaël</a>'s demos...</p>
+    </body>
+</html>
