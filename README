@@ -1,4 +1,5 @@
-The code is public, yes, feel free to use and re-use. But the purpose of this
-is for you to git pull to your computer or server, and point your browser to
-index.html. Yes, I should host this somewhere so you could just see the pages,
-wget the files and get done with it. Someday, maybe...
+Feel free to browse this code, or re-use it. It is licensed under the MIT
+license (http://www.opensource.org/licenses/mit-license.php) .
+
+But you probably don't want to see the code, you want to see the resulting
+website: http://marado.github.io/taxes .
